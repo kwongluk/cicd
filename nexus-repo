@@ -37,6 +37,16 @@ docker rmi serverb.example.com:8083/redis:r1.0
 docker images
 docker pull serverb.example.com:8083/redis:r1.0
 
+##############################
+ mkdir content
+ docker run --name some-nginx -v /opt/content:/usr/share/nginx/html:ro -d nginx
+ docker images
+ docker ps -a
+ docker rm some-nginx
+ docker stop some-nginx
+ docker rm some-nginx
+ docker rmi d453dd892d93
+ docker images
 
 
 
