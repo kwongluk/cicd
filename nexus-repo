@@ -10,3 +10,6 @@ registries = ['docker.io', 'registry.fedoraproject.org', 'registry.access.redhat
 [registries.insecure]
 registries = ['localhost:8082']
 
+# docker login localhost:8082
+# podman login localhost:8082
+
