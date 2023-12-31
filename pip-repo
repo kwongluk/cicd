@@ -18,3 +18,30 @@ repository = https://192.168.10.121:8443/repository/pypi-hosted
 username = admin
 password = admin
 
+#pip download  flatdict
+Looking in indexes: https://192.168.10.121:8443/repository/pypi-group/simple
+Collecting flatdict
+  Downloading https://192.168.10.121:8443/repository/pypi-group/packages/flatdict/4.0.1/flatdict-4.0.1.tar.gz (8.3 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Saved ./flatdict-4.0.1.tar.gz
+Successfully downloaded flatdict
+
+[root@serverb ~]# tcpdump | grep python
+dropped privs to tcpdump
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on ens160, link-type EN10MB (Ethernet), capture size 262144 bytes
+19:58:03.769715 IP serverb.example.com.60589 > homewifi-2-4GHz.domain: 3415+ A? files.pythonhosted.org. (40)
+19:58:03.785853 IP homewifi-2-4GHz.domain > serverb.example.com.60589: 3415 2/0/0 CNAME dualstack.python.map.fastly.net., A 199.232.44.223 (101)
+19:58:43.128102 IP serverb.example.com.55249 > homewifi-2-4GHz.domain: 53717+ A? files.pythonhosted.org. (40)
+19:58:43.135038 IP homewifi-2-4GHz.domain > serverb.example.com.55249: 53717 2/0/0 CNAME dualstack.python.map.fastly.net., A 199.232.44.223 (101)
+
+[root@serverb ~]# ncat -v -z files.pythonhosted.org 443
+Ncat: Version 7.92 ( https://nmap.org/ncat )
+Ncat: Connected to 199.232.44.223:443.
+Ncat: 0 bytes sent, 0 bytes received in 0.02 seconds.
+[root@serverb ~]#
+
+
+
