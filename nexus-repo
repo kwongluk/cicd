@@ -48,6 +48,31 @@ docker pull serverb.example.com:8083/redis:r1.0
  docker rmi d453dd892d93
  docker images
 
+#####################################
+
+# Pull base image
+FROM debian:latest
+
+# Dockerfile Maintainer
+MAINTAINER  "xxxxxxxx"
+
+# Install nginx and adjust nginx config to stay in foreground
+RUN apt-get update && apt-get install --no-install-recommends -y nginx; \
+ echo "daemon off;" >> /etc/nginx/nginx.conf
+
+# Expose HTTP
+EXPOSE 8089
+
+# Start nginx
+CMD ["/usr/sbin/nginx"]
+
+####################################################
+
+docker build -t nginx .
+
+REPOSITORY                            TAG         IMAGE ID      CREATED         SIZE
+localhost/nginx                       latest      cf7235e0d79a  11 seconds ago  158 MB
+docker.io/library/debian              latest      2a033a8c6371  12 days ago     121 MB
 
 
 
