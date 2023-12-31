@@ -69,6 +69,8 @@ CMD ["/usr/sbin/nginx"]
 ####################################################
 
 docker build -t nginx .
+docker build . -t serverb.example.com:8083/nginx
+
 
 REPOSITORY                            TAG         IMAGE ID      CREATED         SIZE
 localhost/nginx                       latest      cf7235e0d79a  11 seconds ago  158 MB
