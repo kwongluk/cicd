@@ -1,1 +1,7 @@
 
+/etc/containers/registries.conf.d/myregistry.conf
+
+[[registry]]
+location = "registry.mycluster.williamlieurance.com:5000"
+insecure = true
+
