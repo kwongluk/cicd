@@ -1,7 +1,12 @@
 
-/etc/containers/registries.conf.d/myregistry.conf
-
+#vi /etc/containers/registries.conf.d/myregistry.conf
 [[registry]]
-location = "registry.mycluster.williamlieurance.com:5000"
+location = "serverb.example.com:8082"
 insecure = true
+
+#vi /etc/containers/registries.conf
+[registries.search]
+registries = ['docker.io', 'registry.fedoraproject.org', 'registry.access.redhat.com']
+[registries.insecure]
+registries = ['localhost:8082']
 
