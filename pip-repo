@@ -1,0 +1,20 @@
+
+
+#cd /root/.config/pip
+#vi pip.conf
+[global]
+index = https://192.168.10.121:8443/repository/pypi-group/pypi
+index-url = https://192.168.10.121:8443/repository/pypi-group/simple
+no-cache-dir = false
+trusted-host = 192.168.10.121
+cert = /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+
+#vi /root/.pypirc
+[distutils]
+index-servers = 192.168.10.121
+
+[nexus]
+repository = https://192.168.10.121:8443/repository/pypi-hosted
+username = admin
+password = admin
+
