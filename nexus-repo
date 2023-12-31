@@ -76,6 +76,9 @@ REPOSITORY                            TAG         IMAGE ID      CREATED         
 localhost/nginx                       latest      cf7235e0d79a  11 seconds ago  158 MB
 docker.io/library/debian              latest      2a033a8c6371  12 days ago     121 MB
 
+#################################################
+docker push serverb.example.com:8083/nginx:latest
+#################################################
 
 
 
