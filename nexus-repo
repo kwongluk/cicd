@@ -13,3 +13,8 @@ registries = ['localhost:8082']
 # docker login localhost:8082
 # podman login localhost:8082
 
+
+docker images
+docker tag 34d345ffe1f6 serverb.example.com:8083/oraclelinux:mytag
+docker push serverb.example.com:8083/oraclelinux:mytag
+
